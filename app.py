@@ -21,14 +21,16 @@ if enviar:
         st.error("Por favor completa todos los campos.")
     else:
         try:
-            # Lee las credenciales de forma segura desde Streamlit Secrets
-            email_admin = st.secrets["EMAIL_ADMIN"]
-            password = st.secrets["EMAIL_PASSWORD"]
+            # --- MODIFICACIÓN AQUÍ ---
+            # Reemplaza los textos entre comillas con tus datos reales
+            email_admin = "palaciosruth52@gmail.com" 
+            password = "hohyfuvstytzhgwy" 
+            # -------------------------
             
             msg = EmailMessage()
             msg.set_content(f"Nuevo reporte de: {nombre}\nEmail: {email_usuario}\nTipo: {tipo_problema}\nPrioridad: {prioridad}\n\nDescripción:\n{descripcion}")
             msg["Subject"] = f"Reporte de Soporte: {tipo_problema}"
-            msg["From"] = email_usuario
+            msg["From"] = email_admin # Es mejor usar el correo admin como remitente en SMTP
             msg["To"] = email_admin
             
             with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
