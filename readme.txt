@@ -25,5 +25,5 @@ Asegúrate de tener instalado en tu computadora:
 
 1. Clona este repositorio o descarga los archivos en tu computadora:
    ```bash
-   git clone <url-de-tu-repositorio>
+   git clone https://github.com/palaciosruth52-alt/soporte-tecnico.git
    cd <nombre-de-la-carpeta>
